@@ -73,7 +73,7 @@ namespace TestEWS.Tests
 </html>";
             MailMessage mail = new MailMessage();
             SmtpClient client = new SmtpClient();
-            client.Credentials = new System.Net.NetworkCredential("sbalog@lanteria.net", "@WSX3edc");
+            client.Credentials = new System.Net.NetworkCredential("sbalog@lanteria.net", "----");
             client.Port = 587;
             client.EnableSsl = true;
             client.Host = "smtp.office365.com";

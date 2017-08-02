@@ -16,28 +16,7 @@ namespace TestEWS.Tests
             service.Credentials = new WebCredentials("sbalog@lanteria.net", "------");
             service.Url = new Uri("https://outlook.office365.com/EWS/Exchange.asmx");
 
-
-            //DateTime StartDate = DateTime.Today;
-            //DateTime EndDate = DateTime.Today.AddMonths(2);
-            //CalendarView cv = new CalendarView(StartDate, EndDate);
-            //cv.PropertySet = new PropertySet(AppointmentSchema.Start, AppointmentSchema.End, AppointmentSchema.Subject);
-            ////cv.Traversal = ItemTraversal.Associated;
-            //String MailboxToAccess = "sturin@lanteria.net";
-
-            ////var res = EWSHelper.GetSharedCalendarFolders(service, MailboxToAccess);
-
-
-            //FolderId CalendarFolderId = new FolderId(WellKnownFolderName.Calendar, MailboxToAccess);
-            //FindItemsResults<Appointment> fapts = service.FindAppointments(CalendarFolderId, cv);
-            //if (fapts.Items.Count > 0)
-            //{
-            //    foreach (Appointment Appoint in fapts)
-            //    {
-            //        Console.WriteLine(Appoint.Start);
-            //        //Console.WriteLine(Appoint.Subject);
-            //    }
-            //}
-
+            
             List<AttendeeInfo> attendees = new List<AttendeeInfo>();
 
             attendees.Add(new AttendeeInfo()
