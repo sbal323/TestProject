@@ -51,6 +51,7 @@
     <Compile Include="ITest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestManager.cs" />
     <Compile Include="Tests\EWSTest.cs" />
     <Compile Include="Tests\LinqTest.cs" />
     <Compile Include="Tests\MessageCardTest.cs" />
