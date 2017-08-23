@@ -12,10 +12,11 @@ namespace TestEWS
         {
             List<ITest> tests = new List<ITest>();
             //Register tests
-            tests.Add(new Tests.LinqTest());
-            tests.Add(new Tests.WebTest());
+            //tests.Add(new Tests.LinqTest());
+            //tests.Add(new Tests.WebTest());
             //tests.Add(new Tests.EWSTest());
             //tests.Add(new Tests.MessageCardTest());
+            tests.Add(new Tests.CorpSiteIntegrationTest());
             return tests;
         }
         public void RunTests()
