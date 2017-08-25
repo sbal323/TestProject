@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -210,6 +211,62 @@ namespace TestEWS.CorpPortalIntegration
                 }
             }
             return licenses;
+        }
+    }
+    public class Client
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }    
+    public class ErpService 
+    {
+        private string siteUser;
+        private string siteUserDomain;
+        private string siteUserPassword;
+        public ErpService()
+        {
+            siteUser = "";
+            siteUserDomain = "";
+            siteUserPassword = "";
+        }
+        public IEnumerable<Client> GetClients()
+        {
+            List<Client> clients = new List<Client>();
+            using (WebClient client = new WebClient())
+            {
+                client.Credentials = new System.Net.NetworkCredential(siteUser, siteUserPassword, siteUserDomain);
+                Byte[] pageData = client.DownloadData(
+                                        FormatCommandUrl(
+                                            new List<KeyValuePair<string, string>>()
+                                                {
+                                                    new KeyValuePair<string, string>(ErpConstants.ParameterNames.Command, ErpConstants.CommandNames.ClientsList)
+                                                }));
+                string commandResponse = Encoding.UTF8.GetString(pageData);
+                clients = new System.Web.Script.Serialization.JavaScriptSerializer().Deserialize<List<Client>>(commandResponse);
+            }
+            return clients;
+        }
+        private string FormatCommandUrl(List<KeyValuePair<string,string>> parameterValues)
+        {
+            var result = $"{ErpConstants.ErpUrl}?{string.Join("&",parameterValues.Select(kvp => string.Format("{0}={1}", kvp.Key, System.Web.HttpUtility.UrlEncode(kvp.Value))))}";
+            return result;
+        }
+        public int GetEmployeesCount(int clientId)
+        {
+            var employeesCount = 0;
+            using (WebClient client = new WebClient())
+            {
+                client.Credentials = new System.Net.NetworkCredential(siteUser, siteUserPassword, siteUserDomain);
+                Byte[] pageData = client.DownloadData(
+                                        FormatCommandUrl(
+                                            new List<KeyValuePair<string, string>>()
+                                                {
+                                                    new KeyValuePair<string, string>(ErpConstants.ParameterNames.Command, ErpConstants.CommandNames.LicenseNumber),
+                                                    new KeyValuePair<string, string>(ErpConstants.ParameterNames.CustomerId, clientId.ToString())
+                                                }));
+                employeesCount = int.Parse(Encoding.UTF8.GetString(pageData));
+            }
+            return employeesCount;
         }
     }
 }

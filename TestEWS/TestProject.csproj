@@ -47,6 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,6 +58,7 @@
     <Compile Include="CorpPortalIntegration\Constants.cs" />
     <Compile Include="CorpPortalIntegration\CorpPortalService.cs" />
     <Compile Include="CorpPortalIntegration\CorpSiteConstants.cs" />
+    <Compile Include="CorpPortalIntegration\ErpConstants.cs" />
     <Compile Include="Data\Department.cs" />
     <Compile Include="Data\Employee.cs" />
     <Compile Include="ITest.cs" />
