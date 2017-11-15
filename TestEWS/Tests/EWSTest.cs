@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Exchange.WebServices.Data;
 
-namespace TestEWS.Tests
+namespace TestSuite.Tests
 {
     class EWSTest: ITest
     {

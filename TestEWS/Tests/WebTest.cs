@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using TestSuite;
 
-namespace TestEWS.Tests
+namespace Tests
 {
     class WebTest : ITest
     {

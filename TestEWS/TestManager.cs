@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestEWS
+namespace TestSuite
 {
     public class TestManager
     {
@@ -16,7 +16,8 @@ namespace TestEWS
             //tests.Add(new Tests.WebTest());
             //tests.Add(new Tests.EWSTest());
             //tests.Add(new Tests.MessageCardTest());
-            tests.Add(new Tests.CorpSiteIntegrationTest());
+            //tests.Add(new Tests.CorpSiteIntegrationTest());
+            tests.Add(new Tests.oAuthTest());
             return tests;
         }
         public void RunTests()

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestEWS.Tests
+namespace TestSuite.Tests
 {
     class LinqTest: ITest
     {

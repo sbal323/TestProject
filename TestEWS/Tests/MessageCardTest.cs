@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Mail;
 
-namespace TestEWS.Tests
+namespace TestSuite.Tests
 {
     class MessageCardTest: ITest
     {

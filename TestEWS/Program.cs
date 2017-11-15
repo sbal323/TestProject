@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace TestEWS
+namespace TestSuite
 {
     class Program
     {
