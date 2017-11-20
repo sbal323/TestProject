@@ -81,6 +81,7 @@
     <Compile Include="Tests\EWSTest.cs" />
     <Compile Include="Tests\LinqTest.cs" />
     <Compile Include="Tests\MessageCardTest.cs" />
+    <Compile Include="Tests\AsyncTest.cs" />
     <Compile Include="Tests\oAuthTest.cs" />
     <Compile Include="Tests\WebTest.cs" />
   </ItemGroup>

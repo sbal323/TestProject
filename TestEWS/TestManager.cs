@@ -17,7 +17,7 @@ namespace TestSuite
             //tests.Add(new Tests.EWSTest());
             //tests.Add(new Tests.MessageCardTest());
             //tests.Add(new Tests.CorpSiteIntegrationTest());
-            tests.Add(new Tests.oAuthTest());
+            tests.Add(new Tests.AsyncTest());
             return tests;
         }
         public void RunTests()
