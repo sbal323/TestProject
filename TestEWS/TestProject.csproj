@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleUtility.cs" />
     <Compile Include="CorpPortalIntegration\Constants.cs" />
     <Compile Include="CorpPortalIntegration\CorpPortalService.cs" />
     <Compile Include="CorpPortalIntegration\CorpSiteConstants.cs" />
@@ -80,9 +81,11 @@
     <Compile Include="Tests\CorpSiteIntegrationTest.cs" />
     <Compile Include="Tests\EWSTest.cs" />
     <Compile Include="Tests\LinqTest.cs" />
+    <Compile Include="Tests\CombineEmailTest.cs" />
     <Compile Include="Tests\MessageCardTest.cs" />
     <Compile Include="Tests\AsyncTest.cs" />
     <Compile Include="Tests\oAuthTest.cs" />
+    <Compile Include="Tests\ScheduleSerializationTest.cs" />
     <Compile Include="Tests\WebTest.cs" />
   </ItemGroup>
   <ItemGroup>
