@@ -10,9 +10,9 @@ namespace TestSuite
     {
         public static void PrintTestName(this ITest test)
         {
-            Console.WriteLine(new String('*', 45));
-            Console.WriteLine(String.Format("{0}{1}", new String(' ', 15), test.Title));
-            Console.WriteLine(new String('*', 45));
+            ConsoleUtility.WriteSeparatorLine();
+            ConsoleUtility.WriteMessage(String.Format("{0}{1}", new String(' ', 25), test.Title));
+            ConsoleUtility.WriteSeparatorLine();
         }
     }
 }

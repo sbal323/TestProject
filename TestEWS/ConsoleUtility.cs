@@ -10,11 +10,11 @@ namespace TestSuite
     {
         public static void WriteSeparatorLine()
         {
-            Console.WriteLine(new string('*', 60));
+            WriteMessage(new string('*', 60));
         }
         public static void ReadAnyKey()
         {
-            Console.WriteLine("Press any key...");
+            WriteMessage("\nPress any key...\n");
             Console.ReadKey();
         }
         private static void WriteColoredMessage(ConsoleColor color, string message)

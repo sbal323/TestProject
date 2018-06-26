@@ -27,13 +27,8 @@ namespace TestSuite
             {
                 test.PrintTestName();
                 test.Run();
-                PauseTest();
+                ConsoleUtility.ReadAnyKey();
             }
-        }
-        private void PauseTest()
-        {
-            Console.WriteLine("\nPress any key...\n");
-            Console.ReadKey();
         }
     }
 }

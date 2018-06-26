@@ -18,7 +18,7 @@ namespace TestSuite.Tests
 
             employees.Where(x => x.Id == 2).ToList().ForEach(x => { x.EmployeeDepartment = otherDep; });
 
-            Console.WriteLine("Test completed successfully!");
+            ConsoleUtility.WriteMessage("Test completed successfully!");
         }
 
         string ITest.Title
